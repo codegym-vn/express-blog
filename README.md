@@ -19,3 +19,6 @@ Create a MongoDB named 'blog'.
 
 ### Start the server
 ```npm start```
+
+### Browsing the application
+Goto `http://localhost:3000` to access the application
