@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var multer = require('multer');
+var fs = require('fs');
 var Post = require('../models/Post');
 
 var storage = multer.diskStorage({
@@ -72,6 +73,10 @@ router.post("/delete/:id", function(req, res){
     if(err){
       res.render('error', {message: "Post was not found", error: error});
     } else {
+        fs.unlink('public/uploads/' +post.feature, function(err3){
+            console.log('Feature image deleted');
+            console.log(err3);
+        });
         post.remove(function(err2){
           if(err2){
               res.render('error', {message: "Error deleting post", error: error});
