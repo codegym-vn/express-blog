@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .row
+  for post in posts
+    .thumbnail.col-xs-6.col-md-3
+      .post
+        span.post-meta #{post.created_at.getDate()}/#{post.created_at.getMonth() + 1}/#{post.created_at.getFullYear()}
+        a(href="/delete/#{post._id}").btn.btn-sm.glyphicon.glyphicon-remove.pull-right.delete
+        a(href="/edit/#{post._id}").btn.btn-sm.glyphicon.glyphicon-edit.pull-right.remove
+        .post-feature
+          a(href="/posts/#{post._id}")
+            img(src="/uploads/#{post.feature}")
+        h5.post-title
+          a(href="/posts/#{post._id}") #{post.title}

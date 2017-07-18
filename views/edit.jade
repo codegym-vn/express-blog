@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+    if message
+        .message #{message}
+    form(method="post", enctype="multipart/form-data")
+        .form-group
+            label Title
+            input(name="title", value="#{post.title}").form-control
+        .form-group
+            label Content
+            textarea(name="content").form-control.post-edit-content #{post.content}
+        .form-group
+            label Feature image
+            .post-edit-feature
+                img(src="/uploads/#{post.feature}")
+        .form-group
+            label Feature image
+            input(type="file", name="feature")
+        .form-group
+            button.btn.btn-success Create

@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    if message
+        h2 #{message}
+    else
+        h1 Do you want to delete this post?
+        h2 "#{post.title}"
+        form(method="post").form-inline
+            button(type="submit").btn.btn-danger Delete
+            a(href="/").btn.btn-default Cancel

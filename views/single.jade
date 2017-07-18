@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    .single-post
+        .single-post-feature
+            img(src="/uploads/#{post.feature}")
+        h1.single-post-title #{post.title}
+            a(href="/delete/#{post._id}").btn.btn-default.glyphicon.glyphicon-remove.pull-right
+            a(href="/edit/#{post._id}").btn.btn-default.glyphicon.glyphicon-edit.pull-right
+        .single-post-meta
+            span.created-date Posted at: #{post.created_at.toLocaleDateString()}
+        .single-post-content #{post.content}

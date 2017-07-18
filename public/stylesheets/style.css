@@ -1,0 +1,86 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.post{
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+}
+
+.post>.post-feature img{
+  width: 100%;
+  height: auto;
+}
+
+.post>.post-title{
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+  right:0;
+  height: 40px;
+  background-color: rgba(0, 0,0, 0.6);
+  padding: 4px;
+}
+.post>.post-title a{
+  color:white;
+}
+.post a.remove, .post a.delete {
+  position: absolute;
+  top: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.post a.remove{
+  right: 10px;
+}
+
+.post a.delete {
+  right: 50px;
+}
+.post .post-meta {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 2px 4px;
+}
+
+.single-post .single-post-feature{
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.single-post .single-post-feature img{
+  width: 100%;
+  height:auto;
+}
+
+.single-post .single-post-content {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: solid 1px #ccc;
+}
+.copyright {
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-top: solid 1px #ccc;
+}
+
+.post-edit-feature img {
+  width: 200px;
+  height:auto;
+}
+.post-edit-content {
+  min-height:400px;
+}
